@@ -19,24 +19,24 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     productQuantity: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
     productSku: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     manufacturerSku: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
-    productCategoy: {
+    productCategory: {
       type: String,
       required: true,
     },
     productReview: {
       type: [String],
-    }
+    },
   },
   { timestamps: true }
 );
