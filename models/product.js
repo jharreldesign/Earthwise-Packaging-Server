@@ -1,5 +1,20 @@
 const mongoose = require("mongoose");
 
+const reviewSchema = new mongoose.Schema(
+  {
+    recommend: {
+      type: Boolean,
+      required: true,
+    },
+    text: {
+      type: String,
+      required: true,
+    },
+    author: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  },
+  { timestamps: true }
+);
+
 const productSchema = new mongoose.Schema(
   {
     productName: {
@@ -34,9 +49,8 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    productReview: {
-      type: [String],
-    },
+
+    reviews: [reviewSchema],
   },
   { timestamps: true }
 );

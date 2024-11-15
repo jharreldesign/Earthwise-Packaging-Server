@@ -9,10 +9,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  password: {
-    type: String,
-    required: true,
-  },
+  // password: {
+  //   type: String,
+  //   required: true,
+  // },
   email: {
     type: String,
     required: true,
@@ -35,7 +35,7 @@ const userSchema = new mongoose.Schema({
   companyName: {
     type: String,
     required: true,
-  }
+  },
 });
 
 userSchema.set("toJSON", {
