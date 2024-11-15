@@ -5,15 +5,13 @@
 ## Project Description
 
 Welcome to **Earthwise Packaging**, where we’re on a mission to help the food industry go green!
-<br /> Our site offers eco-friendly essentials, from composable cups to biodegradable utensils.
+<br /> Our site offers eco-friendly essentials, from compostable cups to biodegradable utensils.
 <br />Think of us as an eco-supplier, making it easy for businesses to browse, buy, and breathe easier knowing they’re reducing waste.
-<br />Together, we’re packing up pollution and unboxing a greener future one composable fork at a time!
+<br />Together, we’re packing up pollution and unboxing a greener future one compostable fork at a time!
 
 ## Table of Contents
 
-<!-- We give a small & short introduction for what our site provides/does -->
-
-### 📚 | The books is a clickable emoji, so you can redirect back to this list!
+### [📚](#table-of-contents) | The books is a clickable emoji, so you can redirect back to this list!
 
 - **_[Tech Stack](#tech-stack)_**
 - **_[How to Download & Run](#how-to-download--run-the-project)_**
@@ -23,10 +21,8 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
   - **_[Models](#models)_**
   - **_[Product Ideas](#items-listed-for-now-idea)_**
 - **_[Developers](#who-created-this-project)_**
+- **_[Back Logs](#project-backlog)_**
 - **_[Credits](#credits)_**
-- **_[Project Planning](#project-planning)_**
-  - **_[ERD](#erd-plan)_**
-  - **_[Wireframe](#site-wireframe)_**
 - **_[Stretch Goals](#stretch-goals)_**
 
 ## Tech Stack
@@ -42,8 +38,6 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 ## How to Download & Run the Project
 
 ##### [📚](#table-of-contents)
-
-<!-- Here we just show how any other developers want to download this project -->
 
 ### Prerequisites
 
@@ -61,13 +55,11 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 
 1. Run `npm run dev` to launch the local server.
 2. Visit `http://localhost:3000` in your browser to see the project.
-3. It is advised to run **both** the **_Back End_** _&_ **_Front End_** Simultaneously.
+3. It is advised to run **both** the **_Back End_** _&_ **_Front End_** Simiulatiously.
 
 ## Features
 
 ##### [📚](#table-of-contents)
-
-<!-- Here we will list all features that the site will provide so like that we can list off the: AAUS (As a user stories)  -->
 
 ### Endpoints Chart
 
@@ -121,17 +113,17 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 
 #### 2. Inventory/Product Options
 
-| Tag Name                        | Syntax                  | _Required_? |
-| ------------------------------- | ----------------------- | ----------- |
-| `Product-Description:`          | **String**              | _Yes_       |
-| `Product-Image:`                | **String**              | _Yes_       |
-| `Product-Name:`                 | **String**              | _Yes_       |
-| `Product-Quick-Facts:`          | **String**              | **_No_**    |
-| `Reviews:`                      | **String (_Embedded_)** | **_No_**    |
-| `In-Stock-Status:`              | **Number**              | _Yes_       |
-| `Product-Price:`                | **Number**              | _Yes_       |
-| `Product-SKU/Manufacturer-SKU:` | **Number**              | _Yes_       |
-| `Quantity:`                     | **Number**              | _Yes_       |
+| Tag Name                        | Syntax                 | _Required_? |
+| ------------------------------- | ---------------------- | ----------- |
+| `Product-Description:`          | **String**             | _Yes_       |
+| `Product-Image:`                | **String**             | _Yes_       |
+| `Product-Name:`                 | **String**             | _Yes_       |
+| `Product-Quick-Facts:`          | **String**             | **_No_**    |
+| `Reviews:`                      | **String (_Embeded_)** | **_No_**    |
+| `In-Stock-Status:`              | **Number**             | _Yes_       |
+| `Product-Price:`                | **Number**             | _Yes_       |
+| `Product-SKU/Manufacturer-SKU:` | **Number**             | _Yes_       |
+| `Quantity:`                     | **Number**             | _Yes_       |
 
 ---
 
@@ -161,6 +153,12 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | `Jessica:` | **Back** _&_ **Front** - End |
 | `Pedro:`   | CSS _&_ **Front** - End      |
 
+## Project Backlog
+
+##### [📚](#table-of-contents)
+
+### [▶](https://github.com/users/jharreldesign/projects/1) Kanban/Back Logs
+
 ## Credits
 
 ##### [📚](#table-of-contents)
@@ -169,7 +167,7 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 
 - Big thanks to _The Git Guild_ on the idea of setting up this Read me. <br /> _Socials:_ **[Youtube](https://www.youtube.com/watch?v=a8CwpGARAsQ)**
 
-- Better ToC (Table of Contents) format, but also no page lag. Thanks to the Stack Overflow forums! <br /> **[Stack Overflow](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents)**
+- Better ToC (Table of Contents) format, but also no page lag. Thanks to the Stack Overflow forums! <br />_Website:_ **[Stack Overflow](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents)**
 
 ## Stretch Goals
 
