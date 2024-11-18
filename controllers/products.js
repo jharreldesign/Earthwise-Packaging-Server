@@ -1,9 +1,9 @@
 const express = require("express");
-const verifyToken = require("../middleware/verify-token");
+// const verifyToken = require("../middleware/verify-token");
 const Product = require("../models/product");
 const router = express.Router();
 
-router.use(verifyToken);
+// router.use(verifyToken);
 
 router.post("/", async (req, res) => {
   try {
