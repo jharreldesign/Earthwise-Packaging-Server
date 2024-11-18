@@ -5,9 +5,9 @@
 ## Project Description
 
 Welcome to **Earthwise Packaging**, where we’re on a mission to help the food industry go green!
-<br /> Our site offers eco-friendly essentials, from compostable cups to biodegradable utensils.
+<br /> Our site offers eco-friendly essentials, from composable cups to biodegradable utensils.
 <br />Think of us as an eco-supplier, making it easy for businesses to browse, buy, and breathe easier knowing they’re reducing waste.
-<br />Together, we’re packing up pollution and unboxing a greener future one compostable fork at a time!
+<br />Together, we’re packing up pollution and unboxing a greener future one composable fork at a time!
 
 ## Table of Contents
 
@@ -113,17 +113,17 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 
 #### 2. Inventory/Product Options
 
-| Tag Name                        | Syntax                 | _Required_? |
-| ------------------------------- | ---------------------- | ----------- |
-| `Product-Description:`          | **String**             | _Yes_       |
-| `Product-Image:`                | **String**             | _Yes_       |
-| `Product-Name:`                 | **String**             | _Yes_       |
-| `Product-Quick-Facts:`          | **String**             | **_No_**    |
-| `Reviews:`                      | **String (_Embeded_)** | **_No_**    |
-| `In-Stock-Status:`              | **Number**             | _Yes_       |
-| `Product-Price:`                | **Number**             | _Yes_       |
-| `Product-SKU/Manufacturer-SKU:` | **Number**             | _Yes_       |
-| `Quantity:`                     | **Number**             | _Yes_       |
+| Tag Name                        | Syntax                  | _Required_? |
+| ------------------------------- | ----------------------- | ----------- |
+| `Product-Description:`          | **String**              | _Yes_       |
+| `Product-Image:`                | **String**              | _Yes_       |
+| `Product-Name:`                 | **String**              | _Yes_       |
+| `Product-Quick-Facts:`          | **String**              | **_No_**    |
+| `Reviews:`                      | **String (_Embedded_)** | **_No_**    |
+| `In-Stock-Status:`              | **Number**              | _Yes_       |
+| `Product-Price:`                | **Number**              | _Yes_       |
+| `Product-SKU/Manufacturer-SKU:` | **Number**              | _Yes_       |
+| `Quantity:`                     | **Number**              | _Yes_       |
 
 ---
 
