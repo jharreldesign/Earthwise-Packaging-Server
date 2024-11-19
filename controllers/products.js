@@ -3,33 +3,14 @@ const express = require("express");
 const { Product } = require("../models/product");
 const router = express.Router();
 
+// Middleware (uncomment if using token verification)
+// const verifyToken = require("../middleware/verify-token");
 // router.use(verifyToken);
 
+// Create a new product
 router.post("/", async (req, res) => {
   try {
-    const {
-      productName,
-      productDescription,
-      productPrice,
-      productImage,
-      productQuantity,
-      productSku,
-      manufacturerSku,
-      productReview,
-      productCategory,
-    } = req.body;
-
-    const newProduct = new Product({
-      productName,
-      productDescription,
-      productPrice,
-      productImage,
-      productQuantity,
-      productSku,
-      manufacturerSku,
-      productReview,
-      productCategory,
-    });
+    const newProduct = new Product(req.body);
     await newProduct.save();
     res.status(201).send(newProduct);
   } catch (error) {
@@ -61,11 +42,11 @@ router.get("/:id", async (req, res) => {
 // Update a product by ID
 router.put("/:id", async (req, res) => {
   try {
-    const updates = req.body;
-    const product = await Product.findByIdAndUpdate(req.params.id, updates, {
-      new: true,
-      runValidators: true,
-    });
+    const product = await Product.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
     if (!product) return res.status(404).send({ error: "Product not found" });
     res.send(product);
   } catch (error) {
@@ -84,49 +65,54 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//Create Review
+// Create a review for a product
 router.post("/:productId/reviews", async (req, res) => {
   try {
-    req.body.author = req.user._id;
     const product = await Product.findById(req.params.productId);
-    console.log("product", product);
-    product.reviews.push(req.body);
+    if (!product) return res.status(404).send({ error: "Product not found" });
+
+    const review = { ...req.body, author: req.user?._id };
+    product.reviews.push(review);
     await product.save();
 
-    // Find the newly created review:
     const newReview = product.reviews[product.reviews.length - 1];
-
-    newReview._doc.author = req.user;
-
-    // Respond with the newComment:
     res.status(201).json(newReview);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).send({ error: error.message });
   }
 });
 
-//Update Review
+// Update a product review
 router.put("/:productId/reviews/:reviewId", async (req, res) => {
   try {
     const product = await Product.findById(req.params.productId);
+    if (!product) return res.status(404).send({ error: "Product not found" });
+
     const review = product.reviews.id(req.params.reviewId);
+    if (!review) return res.status(404).send({ error: "Review not found" });
+
     review.text = req.body.text;
     await product.save();
-    res.status(200).json({ message: "Ok" });
-  } catch (err) {
-    res.status(500).json(err);
+    res.status(200).json({ message: "Review updated successfully" });
+  } catch (error) {
+    res.status(500).send({ error: error.message });
   }
 });
 
-//Delete Review
+// Delete a product review
 router.delete("/:productId/reviews/:reviewId", async (req, res) => {
   try {
     const product = await Product.findById(req.params.productId);
-    product.reviews.remove({ _id: req.params.reviewId });
+    if (!product) return res.status(404).send({ error: "Product not found" });
+
+    const review = product.reviews.id(req.params.reviewId);
+    if (!review) return res.status(404).send({ error: "Review not found" });
+
+    review.remove();
     await product.save();
-    res.status(200).json({ message: "Ok" });
-  } catch (err) {
-    res.status(500).json(err);
+    res.status(200).json({ message: "Review deleted successfully" });
+  } catch (error) {
+    res.status(500).send({ error: error.message });
   }
 });
 
