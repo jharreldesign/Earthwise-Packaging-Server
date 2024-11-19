@@ -18,6 +18,11 @@ router.post("/signup", async (req, res) => {
 
     const hashedPassword = bcrypt.hashSync(req.body.password, SALT_LENGTH);
 
+    // Check if the role is provided, otherwise default to "customer"
+    const role = req.body.role && ["admin", "store_manager", "customer"].includes(req.body.role)
+      ? req.body.role
+      : "customer";
+
     const user = await User.create({
       username: req.body.username,
       name: req.body.name,
@@ -26,13 +31,13 @@ router.post("/signup", async (req, res) => {
       companyName: req.body.companyName,
       address: req.body.address,
       hashedPassword,
-      role: req.body.role || "customer", // Default to 'customer'
+      role, // Dynamic role assignment based on request
     });
 
     const token = jwt.sign(
       { username: user.username, _id: user._id, role: user.role },
       process.env.JWT_SECRET,
-      { expiresIn: "1h" } // Token expires in 1 hour
+      { expiresIn: "1h" }
     );
 
     res.status(201).json({ user, token });
@@ -40,6 +45,7 @@ router.post("/signup", async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
+
 
 // Signin route (Authenticate user)
 router.post("/signin", async (req, res) => {
