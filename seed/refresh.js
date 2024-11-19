@@ -5,6 +5,9 @@ const User = require("../models/user");
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 const run = async () => {
+  await Product.deleteMany({});
+  await Review.deleteMany({});
+  await User.deleteMany({});
   try {
     const users = [
       {
@@ -138,7 +141,6 @@ const run = async () => {
         companyName: "Galactic Systems Inc.",
       },
     ];
-
     const createdUsers = await User.insertMany(users);
     console.log("Users seeded.");
 
@@ -232,7 +234,6 @@ const run = async () => {
         author: [createdUsers[2]._id],
       },
     ];
-
     const createdReviews = await Review.insertMany(reviews);
     console.log("Reviews seeded.");
 
@@ -449,14 +450,10 @@ const run = async () => {
         reviews: [createdReviews[16]],
       },
     ];
-
-    await Product.deleteMany({});
-    await Review.deleteMany({});
-    await User.deleteMany({});
-    console.log("Deleted current data.");
-
     let createdProducts = await Product.insertMany(products);
     console.log("Products seeded.");
+
+    console.log("Deleted current data.");
   } catch (error) {
     console.error("Error seeding data:", error);
   } finally {

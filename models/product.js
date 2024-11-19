@@ -17,12 +17,12 @@ const reviewSchema = new mongoose.Schema(
       ref: "User",
       required: true, 
     },
-    rating: {
-      type: Number,
-      min: 1,
-      max: 5,
-      required: true, 
-    },
+    // rating: {
+    //   type: Number,
+    //   min: 1,
+    //   max: 5,
+    //   required: true, 
+    // },
   },
   { timestamps: true }
 );
@@ -88,5 +88,5 @@ productSchema.index({ productCategory: 1 });
 
 // Create and export the models
 const Product = mongoose.model("Product", productSchema);
-
-module.exports = { Product };
+const Review = mongoose.model("Review", reviewSchema)
+module.exports = { Product, Review };
