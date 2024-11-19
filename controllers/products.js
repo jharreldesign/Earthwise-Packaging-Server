@@ -1,5 +1,4 @@
 const express = require("express");
-// const verifyToken = require("../middleware/verify-token");
 const { Product } = require("../models/product");
 const router = express.Router();
 
@@ -71,7 +70,7 @@ router.post("/:productId/reviews", async (req, res) => {
     const product = await Product.findById(req.params.productId);
     if (!product) return res.status(404).send({ error: "Product not found" });
 
-    const review = { ...req.body, author: req.user?._id };
+    const review = { ...req.body, author: req.user?._id }; // Assuming user is attached to req
     product.reviews.push(review);
     await product.save();
 

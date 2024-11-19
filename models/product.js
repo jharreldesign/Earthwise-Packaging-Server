@@ -10,12 +10,18 @@ const reviewSchema = new mongoose.Schema(
     text: {
       type: String,
       required: true,
-      trim: true, // Ensures no leading or trailing spaces
+      trim: true, 
     },
     author: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: true, // Ensures every review is associated with a user
+      required: true, 
+    },
+    rating: {
+      type: Number,
+      min: 1,
+      max: 5,
+      required: true, 
     },
   },
   { timestamps: true }
@@ -37,12 +43,16 @@ const productSchema = new mongoose.Schema(
     productPrice: {
       type: Number,
       required: true,
-      min: 0, // Ensures price is non-negative
+      min: 0, 
     },
     productImage: {
       type: String,
       required: true,
-      default: "default-image.jpg", // Default image if none is provided
+      default: "default-image.jpg", 
+      validate: {
+        validator: (v) => /^https?:\/\//.test(v), 
+        message: "Invalid image URL",
+      },
     },
     productQuantity: {
       type: Number,
@@ -73,6 +83,8 @@ const productSchema = new mongoose.Schema(
 // Index frequently queried fields for better performance
 productSchema.index({ productName: 1 });
 productSchema.index({ productSku: 1 });
+productSchema.index({ productPrice: 1 });
+productSchema.index({ productCategory: 1 });
 
 // Create and export the models
 const Product = mongoose.model("Product", productSchema);

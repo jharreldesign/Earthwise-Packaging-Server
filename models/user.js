@@ -21,10 +21,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // hashedPassword: {
-  //   type: String,
-  //   required: true,
-  // },
+  hashedPassword: {
+    type: String,
+    required: true,
+  },
   address: [
     {
       street: { type: String, required: true },
@@ -35,6 +35,11 @@ const userSchema = new mongoose.Schema({
   companyName: {
     type: String,
     required: true,
+  },
+  role: {
+    type: String,
+    enum: ["admin", "store_manager", "customer"],
+    default: "customer",
   },
 });
 
