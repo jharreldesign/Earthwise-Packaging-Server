@@ -22,7 +22,6 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
   - **_[Product Ideas](#items-listed-for-now-idea)_**
 - **_[Developers](#who-created-this-project)_**
 - **_[Back Logs](#project-backlog)_**
-- **_[Credits](#credits)_**
 - **_[Stretch Goals](#stretch-goals)_**
 
 ## Tech Stack
@@ -157,16 +156,6 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 ##### [📚](#table-of-contents)
 
 ### [▶](https://github.com/users/jharreldesign/projects/1) Kanban/Back Logs
-
-## Credits
-
-##### [📚](#table-of-contents)
-
-<!-- Having credits is optional but it's good practice to give credits to other developers for using their code/product/or anything else that should be credited to them. -->
-
-- Big thanks to _The Git Guild_ on the idea of setting up this Read me. <br /> _Socials:_ **[Youtube](https://www.youtube.com/watch?v=a8CwpGARAsQ)**
-
-- Better ToC (Table of Contents) format, but also no page lag. Thanks to the Stack Overflow forums! <br />_Website:_ **[Stack Overflow](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents)**
 
 ## Stretch Goals
 
