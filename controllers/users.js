@@ -47,7 +47,8 @@ router.post("/signin", async (req, res) => {
         { username: user.username, _id: user._id },
         process.env.JWT_SECRET
       );
-      res.status(200).json({ token });
+      //Added "user" to use whole user object including mongo ID for future use
+      res.status(200).json({ user, token });
     } else {
       res.status(401).json({ error: "Invalid username or password." });
     }
