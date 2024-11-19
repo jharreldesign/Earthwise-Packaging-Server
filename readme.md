@@ -151,7 +151,6 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | ---------- | ---------------------------- |
 | `Jason:`   | **Back** _&_ **Front** - End |
 | `Jessica:` | **Back** _&_ **Front** - End |
-| `Pedro:`   | CSS _&_ **Front** - End      |
 
 ## Project Backlog
 
@@ -173,8 +172,7 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 
 ##### [📚](#table-of-contents)
 
-| By who?     | _On what exactly_?                                                    | _Where_?                   |
-| ----------- | --------------------------------------------------------------------- | -------------------------- |
-| `Pedro:`    | The ability of the site prefetching data before the user even clicks. | **Front** End              |
-| `Jason:`    | Shipping options with shipping progress.                              | **Back** End               |
-| `Everyone:` | Being able to implement a search/filter feature.                      | **Back** _&_ **Front** End |
+| By who?     | _On what exactly_?                               | _Where_?                   |
+| ----------- | ------------------------------------------------ | -------------------------- |
+| `Jason:`    | Shipping options with shipping progress.         | **Back** End               |
+| `Everyone:` | Being able to implement a search/filter feature. | **Back** _&_ **Front** End |
