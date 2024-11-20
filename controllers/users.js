@@ -1,39 +1,45 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const User = require("../models/user");
-const verifyToken = require("../middleware/verify-token");
-const { verifyAdmin, verifyStoreManager } = require("../middleware/role-check");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const User = require('../models/user');
+const verifyToken = require('../middleware/verify-token');
+const { verifyAdmin, verifyStoreManager } = require('../middleware/role-check');
 
 const SALT_LENGTH = 12;
 
 // Signup route (Create user)
 router.post("/signup", async (req, res) => {
   try {
-    const userInDatabase = await User.findOne({ username: req.body.username });
+    const { username, password, name, email, phoneNumber, companyName, address, role = 'customer' } = req.body;
+
+    // Validate that all required fields are provided
+    if (!username || !password || !name || !email) {
+      return res.status(400).json({ error: "All fields are required." });
+    }
+
+    // Check if user exists
+    const userInDatabase = await User.findOne({ username });
     if (userInDatabase) {
       return res.status(409).json({ error: "Username already taken." });
     }
 
-    const hashedPassword = bcrypt.hashSync(req.body.password, SALT_LENGTH);
+    // Hash password
+    const hashedPassword = bcrypt.hashSync(password, SALT_LENGTH);
 
-    // Check if the role is provided, otherwise default to "customer"
-    const role = req.body.role && ["admin", "store_manager", "customer"].includes(req.body.role)
-      ? req.body.role
-      : "customer";
-
+    // Create user
     const user = await User.create({
-      username: req.body.username,
-      name: req.body.name,
-      email: req.body.email,
-      phoneNumber: req.body.phoneNumber,
-      companyName: req.body.companyName,
-      address: req.body.address,
+      username,
+      name,
+      email,
+      phoneNumber,
+      companyName,
+      address,
       hashedPassword,
-      role, // Dynamic role assignment based on request
+      role,
     });
 
+    // Generate JWT
     const token = jwt.sign(
       { username: user.username, _id: user._id, role: user.role },
       process.env.JWT_SECRET,
@@ -42,41 +48,52 @@ router.post("/signup", async (req, res) => {
 
     res.status(201).json({ user, token });
   } catch (error) {
+    console.error("Signup error:", error);
     res.status(400).json({ error: error.message });
   }
 });
-
 
 // Signin route (Authenticate user)
 router.post("/signin", async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    // Find the user based on the username
-    const user = await User.findOne({ username: username });
+    // Validate if both username and password are provided
+    if (!username || !password) {
+      return res.status(400).json({ error: "Username and password are required." });
+    }
+
+    const user = await User.findOne({ username });
     if (!user) {
       return res.status(401).json({ error: "Invalid username or password." });
     }
 
-    // Check if the password is correct
-    if (password && bcrypt.compareSync(password, user.hashedPassword)) {
-      // If password matches, generate a JWT token
-      const token = jwt.sign(
-        { username: user.username, _id: user._id, role: user.role },
-        process.env.JWT_SECRET,
-        { expiresIn: "1h" } // Token expires in 1 hour
-      );
-      res.status(200).json({ user, token });
-    } else {
-      res.status(401).json({ error: "Invalid username or password." });
+    // If the user does not have a password stored, throw an error
+    if (!user.hashedPassword) {
+      return res.status(500).json({ error: "User password data is corrupted. Please reset your password." });
     }
+
+    // Compare the provided password with the stored hash
+    const isPasswordMatch = bcrypt.compareSync(password, user.hashedPassword);
+    if (!isPasswordMatch) {
+      return res.status(401).json({ error: "Invalid username or password." });
+    }
+
+    // Generate JWT token
+    const token = jwt.sign(
+      { username: user.username, _id: user._id, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
+
+    res.status(200).json({ user, token });
   } catch (error) {
-    console.error("Signin error:", error); // Keep for backend debugging
+    console.error("Signin error:", error);
     res.status(500).json({ error: "An unexpected error occurred." });
   }
 });
 
-// Get all users (Read) - Admin only
+// Admin routes (Get all users)
 router.get("/", verifyToken, verifyAdmin, async (req, res) => {
   try {
     const users = await User.find({}, "-hashedPassword");
@@ -86,7 +103,7 @@ router.get("/", verifyToken, verifyAdmin, async (req, res) => {
   }
 });
 
-// Get a single user by ID (Read) - Admin only
+// Get user by ID (Read)
 router.get("/:id", async (req, res) => {
   try {
     const user = await User.findById(req.params.id, "-hashedPassword");
@@ -97,16 +114,18 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// Update a user by ID (Update) - Store Managers can update their details, but only Admin can update role
+// Update user by ID (Store managers can update their details, Admin can update role)
 router.put("/:id", verifyToken, verifyStoreManager, async (req, res) => {
   try {
     const updates = req.body;
+
+    // Hash password if provided
     if (updates.password) {
       updates.hashedPassword = bcrypt.hashSync(updates.password, SALT_LENGTH);
       delete updates.password;
     }
 
-    // Store managers cannot update role
+    // Ensure managers cannot update their roles
     if (updates.role) {
       return res.status(403).json({ error: "Cannot update role." });
     }
@@ -123,7 +142,7 @@ router.put("/:id", verifyToken, verifyStoreManager, async (req, res) => {
   }
 });
 
-// Delete a user by ID (Delete) - Admin only
+// Delete user by ID (Admin only)
 router.delete("/:id", verifyToken, verifyAdmin, async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id);
