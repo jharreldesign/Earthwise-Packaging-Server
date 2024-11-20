@@ -243,7 +243,8 @@ const run = async () => {
         productDescription:
           "Classic 6-inch round plate made from compostable sugarcane fiber.",
         productPrice: 12.99,
-        productImage: "https://example.com/images/6-classic-round-plate.jpg",
+        productImage:
+          "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Fproducts%2F20210315_tellus-plate-6-inch-a_1024x1024_2x_8eacf5d2-210e-48e8-bed2-bbfef9804e88.webp%3Fv%3D1674506065&w=3840&q=75",
         productQuantity: 150,
         productSku: "PLATE-6RND-01",
         manufacturerSku: "MAN-PLATE-6RND-01",
@@ -256,7 +257,7 @@ const run = async () => {
           "Elegant 10-inch oval plate crafted from sustainable natural fibers.",
         productPrice: 18.99,
         productImage:
-          "https://example.com/images/10-oval-compostable-plate.jpg",
+          "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FPL-SC-U10O-LFS_01.png%3Fv%3D1701371899&w=3840&q=75",
         productQuantity: 100,
         productSku: "PLATE-10OVL-01",
         manufacturerSku: "MAN-PLATE-10OVL-01",
@@ -268,7 +269,7 @@ const run = async () => {
         productDescription:
           "Durable and eco-friendly 8-inch wooden boat for serving food.",
         productPrice: 9.99,
-        productImage: "https://example.com/images/8-wooden-boat.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FVT-BT-08_2048x_cfd4c30c-1312-4c34-92ed-7c529bae8cbe.webp%3Fv%3D1694808128&w=3840&q=75",
         productQuantity: 200,
         productSku: "BOAT-8WOOD-01",
         manufacturerSku: "MAN-BOAT-8WOOD-01",
@@ -281,7 +282,7 @@ const run = async () => {
           "Large balsa wood cheese board for stylish food presentations.",
         productPrice: 22.99,
         productImage:
-          "https://example.com/images/11x11-square-cheese-board.jpg",
+          "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FCB-SQ-1x1.webp%3Fv%3D1692718384&w=3840&q=75",
         productQuantity: 80,
         productSku: "BOARD-11SQ-01",
         manufacturerSku: "MAN-BOARD-11SQ-01",
@@ -293,7 +294,7 @@ const run = async () => {
         productDescription:
           "Eco-friendly 7.5-inch wrapped PLA straws in green color, ideal for bulk usage.",
         productPrice: 6.99,
-        productImage: "https://example.com/images/7-5-wrapped-straw.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FRenewable_CompostableStrawsGreenWrapped7.75in5mm.png%3Fv%3D1695843521&w=1200&q=75",
         productQuantity: 500,
         productSku: "STRAW-7PLA-01",
         manufacturerSku: "MAN-STRAW-7PLA-01",
@@ -306,7 +307,7 @@ const run = async () => {
         productDescription:
           "Biodegradable 5.5-inch unwrapped PHA straws, perfect for cocktails.",
         productPrice: 5.99,
-        productImage: "https://example.com/images/5-5-pha-straw.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FEP-STPHA513__45181__58115.png%3Fv%3D1727803214&w=1200&q=75",
         productQuantity: 600,
         productSku: "STRAW-5PHA-01",
         manufacturerSku: "MAN-STRAW-5PHA-01",
@@ -318,7 +319,7 @@ const run = async () => {
         productDescription:
           "Wide 8.5-inch PLA boba straw with angle cut, ideal for bubble tea lovers.",
         productPrice: 8.99,
-        productImage: "https://example.com/images/8-5-boba-straw.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2F8.5inBobaStraw_Unwrapped_Green_10mm.png%3Fv%3D1695746689&w=1200&q=75",
         productQuantity: 400,
         productSku: "STRAW-8BOBA-01",
         manufacturerSku: "MAN-STRAW-8BOBA-01",
@@ -330,7 +331,7 @@ const run = async () => {
         productDescription:
           "Durable 7-inch yellow fork made from plant-based high-heat materials.",
         productPrice: 10.99,
-        productImage: "https://example.com/images/7-yellow-fork.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FFO-PS-6.png%3Fv%3D1705948928&w=1200&q=75",
         productQuantity: 300,
         productSku: "UTENSIL-FORK-01",
         manufacturerSku: "MAN-UTENSIL-FORK-01",
@@ -342,7 +343,7 @@ const run = async () => {
         productDescription:
           "Sturdy 6-inch yellow spoon designed for high-heat applications.",
         productPrice: 10.99,
-        productImage: "https://example.com/images/6-yellow-spoon.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FEP-S013Y.png%3Fv%3D1695745102&w=1200&q=75",
         productQuantity: 300,
         productSku: "UTENSIL-SPOON-01",
         manufacturerSku: "MAN-UTENSIL-SPOON-01",
@@ -354,7 +355,7 @@ const run = async () => {
         productDescription:
           "Reliable 6-inch yellow knife crafted for plant-based high-heat usage.",
         productPrice: 10.99,
-        productImage: "https://example.com/images/6-yellow-knife.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FEP-S011Y.png%3Fv%3D1695745160&w=1200&q=75",
         productQuantity: 300,
         productSku: "UTENSIL-KNIFE-01",
         manufacturerSku: "MAN-UTENSIL-KNIFE-01",
@@ -366,7 +367,7 @@ const run = async () => {
         productDescription:
           "Eco-friendly bamboo cutlery set including fork, knife, spoon, and napkin.",
         productPrice: 15.99,
-        productImage: "https://example.com/images/6-7-bamboo-cutlery-set.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FFO-PS-6.png%3Fv%3D1705948928&w=1200&q=75",
         productQuantity: 200,
         productSku: "CUTLERY-BAMBOO-01",
         manufacturerSku: "MAN-CUTLERY-BAMBOO-01",
@@ -379,7 +380,7 @@ const run = async () => {
         productDescription:
           "8 oz double-wall hot cup lined with PLA for compostable use.",
         productPrice: 9.99,
-        productImage: "https://example.com/images/8oz-compostable-hot-cup.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FRP-RDC08.webp%3Fv%3D1685543005&w=1200&q=75",
         productQuantity: 500,
         productSku: "CUP-HOT8-01",
         manufacturerSku: "MAN-CUP-HOT8-01",
@@ -392,7 +393,7 @@ const run = async () => {
         productDescription:
           "12 oz double-wall hot cup with compostable PLA lining.",
         productPrice: 12.99,
-        productImage: "https://example.com/images/12oz-compostable-hot-cup.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FRP-RDC12_2000x_278844e7-706f-4bbf-9fe7-e00e58f792c8.webp%3Fv%3D1684948465&w=1200&q=75",
         productQuantity: 400,
         productSku: "CUP-HOT12-01",
         manufacturerSku: "MAN-CUP-HOT12-01",
@@ -404,7 +405,7 @@ const run = async () => {
         productDescription:
           "Durable 12 oz cold cup made from compostable corn plastic.",
         productPrice: 8.99,
-        productImage: "https://example.com/images/12oz-cold-cup.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Fproducts%2FRP-PLA16_58fe1fdf-f462-49af-8a6a-79c60b81293e.jpg%3Fv%3D1680235469&w=1200&q=75",
         productQuantity: 600,
         productSku: "CUP-COLD12-01",
         manufacturerSku: "MAN-CUP-COLD12-01",
@@ -416,7 +417,7 @@ const run = async () => {
         productDescription:
           "Eco-friendly 16 oz cold cup crafted from compostable corn plastic.",
         productPrice: 10.99,
-        productImage: "https://example.com/images/16oz-cold-cup.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Fproducts%2FRP-PLA16.jpg%3Fv%3D1680230987&w=1200&q=75",
         productQuantity: 500,
         productSku: "CUP-COLD16-01",
         manufacturerSku: "MAN-CUP-COLD16-01",
@@ -429,7 +430,7 @@ const run = async () => {
         productDescription:
           "Sip lid designed for 9-24 oz cold cups, made with recycled plastic.",
         productPrice: 7.99,
-        productImage: "https://example.com/images/sip-lid-bluestripe.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Ffiles%2FEP-FLCS-R.jpg%3Fv%3D1697477972&w=1200&q=75",
         productQuantity: 300,
         productSku: "LID-SIPBLUES-01",
         manufacturerSku: "MAN-LID-SIPBLUES-01",
@@ -442,7 +443,7 @@ const run = async () => {
         productDescription:
           "Fiber lid for hot or cold cups, free of added PFAS, with sip-friendly design.",
         productPrice: 8.99,
-        productImage: "https://example.com/images/fiber-lid-no-tree.jpg",
+        productImage: "https://greenpaperproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0612%2F3690%2F4162%2Fproducts%2FCUL-FB-8G_01_cb804144-21f1-436c-9772-41a6d55e7d6c.png%3Fv%3D1673036739&w=1200&q=75",
         productQuantity: 350,
         productSku: "LID-FIBER-01",
         manufacturerSku: "MAN-LID-FIBER-01",
