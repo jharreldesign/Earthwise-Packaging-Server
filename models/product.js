@@ -10,18 +10,18 @@ const reviewSchema = new mongoose.Schema(
     text: {
       type: String,
       required: true,
-      trim: true, 
+      trim: true,
     },
     author: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: true, 
+      required: true,
     },
     rating: {
       type: Number,
       min: 1,
       max: 5,
-      required: true, 
+      required: false,
     },
   },
   { timestamps: true }
@@ -43,14 +43,14 @@ const productSchema = new mongoose.Schema(
     productPrice: {
       type: Number,
       required: true,
-      min: 0, 
+      min: 0,
     },
     productImage: {
       type: String,
       required: true,
-      default: "default-image.jpg", 
+      default: "default-image.jpg",
       validate: {
-        validator: (v) => /^https?:\/\//.test(v), 
+        validator: (v) => /^https?:\/\//.test(v),
         message: "Invalid image URL",
       },
     },
@@ -88,5 +88,5 @@ productSchema.index({ productCategory: 1 });
 
 // Create and export the models
 const Product = mongoose.model("Product", productSchema);
-
-module.exports = { Product };
+const Review = mongoose.model("Review", reviewSchema);
+module.exports = { Product, Review };

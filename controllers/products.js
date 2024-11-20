@@ -31,6 +31,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
+    console.log("product", product);
     if (!product) return res.status(404).send({ error: "Product not found" });
     res.send(product);
   } catch (error) {
@@ -41,11 +42,10 @@ router.get("/:id", async (req, res) => {
 // Update a product by ID
 router.put("/:id", async (req, res) => {
   try {
-    const product = await Product.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      { new: true, runValidators: true }
-    );
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
     if (!product) return res.status(404).send({ error: "Product not found" });
     res.send(product);
   } catch (error) {

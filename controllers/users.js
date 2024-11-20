@@ -87,7 +87,7 @@ router.get("/", verifyToken, verifyAdmin, async (req, res) => {
 });
 
 // Get a single user by ID (Read) - Admin only
-router.get("/:id", verifyToken, verifyAdmin, async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const user = await User.findById(req.params.id, "-hashedPassword");
     if (!user) return res.status(404).json({ error: "User not found." });
