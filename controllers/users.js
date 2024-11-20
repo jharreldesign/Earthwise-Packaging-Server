@@ -19,9 +19,11 @@ router.post("/signup", async (req, res) => {
     const hashedPassword = bcrypt.hashSync(req.body.password, SALT_LENGTH);
 
     // Check if the role is provided, otherwise default to "customer"
-    const role = req.body.role && ["admin", "store_manager", "customer"].includes(req.body.role)
-      ? req.body.role
-      : "customer";
+    const role =
+      req.body.role &&
+      ["admin", "store_manager", "customer"].includes(req.body.role)
+        ? req.body.role
+        : "customer";
 
     const user = await User.create({
       username: req.body.username,
@@ -45,7 +47,6 @@ router.post("/signup", async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
-
 
 // Signin route (Authenticate user)
 router.post("/signin", async (req, res) => {
