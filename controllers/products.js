@@ -7,6 +7,7 @@ const verifyToken = require('../middleware/verify-token');
 
 // Middleware to check user role
 const verifyAdmin = (req, res, next) => {
+
   if (req.user?.role !== 'admin') {
     return res.status(403).send({ error: 'Forbidden: Only admin can perform this action' });
   }
@@ -117,10 +118,13 @@ router.put("/:productId/reviews/:reviewId", async (req, res) => {
 
     // Check if the logged-in user is the author of the review
     if (review.author.toString() !== req.user?._id.toString()) {
-      return res.status(403).send({ error: "You are not authorized to update this review" });
+      return res
+        .status(403)
+        .send({ error: "You are not authorized to update this review" });
     }
 
     review.text = req.body.text;
+    review.recommend = req.body.recommend;
     await product.save();
     res.status(200).json({ message: "Review updated successfully" });
   } catch (error) {
@@ -139,7 +143,9 @@ router.delete("/:productId/reviews/:reviewId", async (req, res) => {
 
     // Check if the logged-in user is the author of the review
     if (review.author.toString() !== req.user?._id.toString()) {
-      return res.status(403).send({ error: "You are not authorized to delete this review" });
+      return res
+        .status(403)
+        .send({ error: "You are not authorized to delete this review" });
     }
 
     review.remove();
