@@ -1,17 +1,26 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const User = require('../models/user');
-const verifyToken = require('../middleware/verify-token');
-const { verifyAdmin, verifyStoreManager } = require('../middleware/role-check');
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const User = require("../models/user");
+const verifyToken = require("../middleware/verify-token");
+const { verifyAdmin, verifyStoreManager } = require("../middleware/role-check");
 
 const SALT_LENGTH = 12;
 
 // Signup route (Create user)
 router.post("/signup", async (req, res) => {
   try {
-    const { username, password, name, email, phoneNumber, companyName, address, role = 'customer' } = req.body;
+    const {
+      username,
+      password,
+      name,
+      email,
+      phoneNumber,
+      companyName,
+      address,
+      role = "customer",
+    } = req.body;
 
     // Validate that all required fields are provided
     if (!username || !password || !name || !email) {
@@ -60,7 +69,9 @@ router.post("/signin", async (req, res) => {
 
     // Validate if both username and password are provided
     if (!username || !password) {
-      return res.status(400).json({ error: "Username and password are required." });
+      return res
+        .status(400)
+        .json({ error: "Username and password are required." });
     }
 
     const user = await User.findOne({ username });
@@ -70,7 +81,11 @@ router.post("/signin", async (req, res) => {
 
     // If the user does not have a password stored, throw an error
     if (!user.hashedPassword) {
-      return res.status(500).json({ error: "User password data is corrupted. Please reset your password." });
+      return res
+        .status(500)
+        .json({
+          error: "User password data is corrupted. Please reset your password.",
+        });
     }
 
     // Compare the provided password with the stored hash

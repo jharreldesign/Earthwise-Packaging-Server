@@ -1,4 +1,6 @@
-<!-- Here we can also have a image/banner of our project. Either a logo or just anything that gives the read me some flare -->
+<div style="width:25%; margin: auto;">
+  <img src="./assets/Site-Logo/earthwise-logo" width="100px" alt="earthwise-packaging-logo">
+</div>
 
 # EARTHWISE PACKAGING
 
@@ -22,7 +24,6 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
   - **_[Product Ideas](#items-listed-for-now-idea)_**
 - **_[Developers](#who-created-this-project)_**
 - **_[Back Logs](#project-backlog)_**
-- **_[Credits](#credits)_**
 - **_[Stretch Goals](#stretch-goals)_**
 
 ## Tech Stack
@@ -72,7 +73,7 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | `GET:`      | `/products`            | **Get** all `Products`                             | _Yes_           |
 | `GET(ID):`  | `/products/:productId` | **Get** a single `Product`                         | _Yes_           |
 | `GET:`      | `/cart`                | **Get** all `Products` inside the cart             | **_No_**        |
-| `PUT:`      | `/cart/:CardId`        | **Update** a single `Product` amount from the cart | **_No_**        |
+| `PUT:`      | `/cart/:cardId`        | **Update** a single `Product` amount from the cart | **_No_**        |
 | `DELETE:`   | `/cart/:cartId`        | **Delete** a single `Product` from the cart        | **_No_**        |
 
 #### Endpoints for Admins
@@ -82,7 +83,7 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | `POST:`     | `/products`            | **Create** a `Product` listing into the data base  | _Yes_           |
 | `PUT:`      | `/products/:productId` | **Update** a single `Product` from the data base   | _Yes_           |
 | `DELETE:`   | `/products/:productId` | **Delete** a single `Product` from the data base   | _Yes_           |
-| `PUT:`      | `/cart/:CardId`        | **Update** a single `Product` amount from the cart | **_No_**        |
+| `PUT:`      | `/cart/:cardId`        | **Update** a single `Product` amount from the cart | **_No_**        |
 | `DELETE:`   | `/cart/:cartId`        | **Delete** a single `Product` from the cart        | **_No_**        |
 
 ### Portals
@@ -136,13 +137,6 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | `Food & Eating Supplies:` | Plates, Straws, Utensils, & Cups (hot, cold, & multiple sizes)          |
 | `Kitchen Essentials:`     | Catering boxes/items, Liner sheets, To-go containers, & Carry-out boxes |
 
-<!-- Decided to remove the rest and comment them just in case if we want to add them later but for now. I think I'll leave the first four. -->
-
-<!--
-| | paper bags, Kitchen hardware (spatulas, knives), Eco-friendly tape, |
-| | Food trays, Trash bags, & lastly Gloves                             |
--->
-
 ## Who created this Project?
 
 ##### [📚](#table-of-contents)
@@ -151,7 +145,7 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | ---------- | ---------------------------- |
 | `Jason:`   | **Back** _&_ **Front** - End |
 | `Jessica:` | **Back** _&_ **Front** - End |
-| `Pedro:`   | CSS _&_ **Front** - End      |
+| `Pedro:`   | **Front** - End              |
 
 ## Project Backlog
 
@@ -159,22 +153,12 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 
 ### [▶](https://github.com/users/jharreldesign/projects/1) Kanban/Back Logs
 
-## Credits
-
-##### [📚](#table-of-contents)
-
-<!-- Having credits is optional but it's good practice to give credits to other developers for using their code/product/or anything else that should be credited to them. -->
-
-- Big thanks to _The Git Guild_ on the idea of setting up this Read me. <br /> _Socials:_ **[Youtube](https://www.youtube.com/watch?v=a8CwpGARAsQ)**
-
-- Better ToC (Table of Contents) format, but also no page lag. Thanks to the Stack Overflow forums! <br />_Website:_ **[Stack Overflow](https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents)**
-
 ## Stretch Goals
 
 ##### [📚](#table-of-contents)
 
-| By who?     | _On what exactly_?                                                    | _Where_?                   |
-| ----------- | --------------------------------------------------------------------- | -------------------------- |
-| `Pedro:`    | The ability of the site prefetching data before the user even clicks. | **Front** End              |
-| `Jason:`    | Shipping options with shipping progress.                              | **Back** End               |
-| `Everyone:` | Being able to implement a search/filter feature.                      | **Back** _&_ **Front** End |
+| By who?     | _On what exactly_?                               | _Where_?                   |
+| ----------- | ------------------------------------------------ | -------------------------- |
+| `Pedro:`    | A prefetch product when a user hovers a product  | **Front** End              |
+| `Jason:`    | Shipping options with shipping progress.         | **Back** End               |
+| `Everyone:` | Being able to implement a search/filter feature. | **Back** _&_ **Front** End |
