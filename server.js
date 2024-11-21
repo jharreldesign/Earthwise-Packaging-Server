@@ -10,6 +10,7 @@ const profilesRouter = require('./controllers/profiles');
 const productsRouter = require('./controllers/products');
 const shoppingCartRouter = require('./controllers/shoppingCart');
 const shippingRouter = require('./controllers/shipping');
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -27,6 +28,6 @@ app.use('/products', productsRouter);
 app.use('/cart', shoppingCartRouter);
 app.use('/shipping', shippingRouter);
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('The express app is ready!');
 });
