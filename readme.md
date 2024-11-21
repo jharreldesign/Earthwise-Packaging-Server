@@ -1,4 +1,6 @@
-<!-- Here we can also have a image/banner of our project. Either a logo or just anything that gives the read me some flare -->
+<div style="width:25%; margin: auto;">
+  <img src="./assets/Site-Logo/earthwise-logo" width="100px" alt="earthwise-packaging-logo">
+</div>
 
 # EARTHWISE PACKAGING
 
@@ -71,7 +73,7 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | `GET:`      | `/products`            | **Get** all `Products`                             | _Yes_           |
 | `GET(ID):`  | `/products/:productId` | **Get** a single `Product`                         | _Yes_           |
 | `GET:`      | `/cart`                | **Get** all `Products` inside the cart             | **_No_**        |
-| `PUT:`      | `/cart/:CardId`        | **Update** a single `Product` amount from the cart | **_No_**        |
+| `PUT:`      | `/cart/:cardId`        | **Update** a single `Product` amount from the cart | **_No_**        |
 | `DELETE:`   | `/cart/:cartId`        | **Delete** a single `Product` from the cart        | **_No_**        |
 
 #### Endpoints for Admins
@@ -81,7 +83,7 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | `POST:`     | `/products`            | **Create** a `Product` listing into the data base  | _Yes_           |
 | `PUT:`      | `/products/:productId` | **Update** a single `Product` from the data base   | _Yes_           |
 | `DELETE:`   | `/products/:productId` | **Delete** a single `Product` from the data base   | _Yes_           |
-| `PUT:`      | `/cart/:CardId`        | **Update** a single `Product` amount from the cart | **_No_**        |
+| `PUT:`      | `/cart/:cardId`        | **Update** a single `Product` amount from the cart | **_No_**        |
 | `DELETE:`   | `/cart/:cartId`        | **Delete** a single `Product` from the cart        | **_No_**        |
 
 ### Portals
@@ -135,13 +137,6 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | `Food & Eating Supplies:` | Plates, Straws, Utensils, & Cups (hot, cold, & multiple sizes)          |
 | `Kitchen Essentials:`     | Catering boxes/items, Liner sheets, To-go containers, & Carry-out boxes |
 
-<!-- Decided to remove the rest and comment them just in case if we want to add them later but for now. I think I'll leave the first four. -->
-
-<!--
-| | paper bags, Kitchen hardware (spatulas, knives), Eco-friendly tape, |
-| | Food trays, Trash bags, & lastly Gloves                             |
--->
-
 ## Who created this Project?
 
 ##### [📚](#table-of-contents)
@@ -150,6 +145,7 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | ---------- | ---------------------------- |
 | `Jason:`   | **Back** _&_ **Front** - End |
 | `Jessica:` | **Back** _&_ **Front** - End |
+| `Pedro:`   | **Front** - End              |
 
 ## Project Backlog
 
@@ -163,5 +159,6 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 
 | By who?     | _On what exactly_?                               | _Where_?                   |
 | ----------- | ------------------------------------------------ | -------------------------- |
+| `Pedro:`    | A prefetch product when a user hovers a product  | **Front** End              |
 | `Jason:`    | Shipping options with shipping progress.         | **Back** End               |
 | `Everyone:` | Being able to implement a search/filter feature. | **Back** _&_ **Front** End |
