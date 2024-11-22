@@ -1,44 +1,50 @@
 <div style="width:25%; margin: auto;">
-  <img src="./assets/Site-Logo/earthwise-logo" width="100px" alt="earthwise-packaging-logo">
+  <img src="./assets/Site-Logo/favicon.ico" width="100px" alt="earthwise-packaging-logo">
 </div>
 
-# EARTHWISE PACKAGING
+# EARTHWISE PACKAGING (Back-End)
 
-## Project Description
+## Greetings
 
-Welcome to **Earthwise Packaging**, where we’re on a mission to help the food industry go green!
-<br /> Our site offers eco-friendly essentials, from composable cups to biodegradable utensils.
-<br />Think of us as an eco-supplier, making it easy for businesses to browse, buy, and breathe easier knowing they’re reducing waste.
-<br />Together, we’re packing up pollution and unboxing a greener future one composable fork at a time!
+Welcome to the **Earthwise Packaging (Back-End)**!
+<br/>I see you're a _curios_ one.
+<br/>Fear not you are free to explore our **back-end** space!
+<br/>You can _fork_ and add onto our project on your side or use this as a template!
 
 ## Table of Contents
 
 ### [📚](#table-of-contents) | The books is a clickable emoji, so you can redirect back to this list!
 
-- **_[Tech Stack](#tech-stack)_**
-- **_[How to Download & Run](#how-to-download--run-the-project)_**
-- **_[Features](#features)_**
-  - **_[End-Point Charts](#endpoints-chart)_**
-  - **_[Portals](#portals)_**
-  - **_[Models](#models)_**
-  - **_[Product Ideas](#items-listed-for-now-idea)_**
-- **_[Developers](#who-created-this-project)_**
-- **_[Back Logs](#project-backlog)_**
-- **_[Stretch Goals](#stretch-goals)_**
+- [Tech Stack](#tech-stack)
+- [Front End](#front-end-repo)
+- [How to Download & Run the Project](#how-to-download--run-the-project)
+- [Endpoints Chart](#endpoints-chart)
+- [Portals](#portals)
+- [Models](#models)
+- [Who created this back-end?](#who-created-this-back-end)
+- [Project backlog](#project-backlog)
+- [Stretch Goals](#stretch-goals)
 
 ## Tech Stack
 
-##### [📚](#table-of-contents)
+### [📚](#table-of-contents)
 
 | Section       | Technology Used           |
 | ------------- | ------------------------- |
 | **Database:** | MongoDB                   |
 | **Backend:**  | Node.js, Express, _&_ JWT |
-| **Frontend:** | Axios, CSS, _&_ React     |
+
+## Front end repo
+
+### [📚](#table-of-contents)
+
+- [Front end](https://github.com/PedroCr05/earthwise-front-end)
+
+- [Deployment Site](https://earthwisepackaging.netlify.app)
 
 ## How to Download & Run the Project
 
-##### [📚](#table-of-contents)
+### [📚](#table-of-contents)
 
 ### Prerequisites
 
@@ -58,13 +64,9 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 2. Visit `http://localhost:3000` in your browser to see the project.
 3. It is advised to run **both** the **_Back End_** _&_ **_Front End_** Simiulatiously.
 
-## Features
+## Endpoints Chart
 
-##### [📚](#table-of-contents)
-
-### Endpoints Chart
-
-##### [📚](#table-of-contents)
+### [📚](#table-of-contents)
 
 #### Endpoint for Users/Customers
 
@@ -86,18 +88,16 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | `PUT:`      | `/cart/:cardId`        | **Update** a single `Product` amount from the cart | **_No_**        |
 | `DELETE:`   | `/cart/:cartId`        | **Delete** a single `Product` from the cart        | **_No_**        |
 
-### Portals
+## Portals
 
-##### [📚](#table-of-contents)
+### [📚](#table-of-contents)
 
 - Customer Only Portal/Access -> MVP
 - Admin Only Portal/Access -> Post MVP
 
-### Models
+## Models
 
-##### [📚](#table-of-contents)
-
----
+### [📚](#table-of-contents)
 
 #### 1. User/Customer Model
 
@@ -126,26 +126,24 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 | `Product-SKU/Manufacturer-SKU:` | **Number**              | _Yes_       |
 | `Quantity:`                     | **Number**              | _Yes_       |
 
----
+### Items listed for our products
 
-### Items listed for now (_idea_)
-
-##### [📚](#table-of-contents)
+### [📚](#table-of-contents)
 
 | Category                  | Products                                                                |
 | ------------------------- | ----------------------------------------------------------------------- |
 | `Food & Eating Supplies:` | Plates, Straws, Utensils, & Cups (hot, cold, & multiple sizes)          |
 | `Kitchen Essentials:`     | Catering boxes/items, Liner sheets, To-go containers, & Carry-out boxes |
 
-## Who created this Project?
+## Who created this back-end?
 
-##### [📚](#table-of-contents)
+### [📚](#table-of-contents)
 
-| Developers | _What Part?_                 |
-| ---------- | ---------------------------- |
-| `Jason:`   | **Back** _&_ **Front** - End |
-| `Jessica:` | **Back** _&_ **Front** - End |
-| `Pedro:`   | **Front** - End              |
+| Developers | Did they work on this repo? |
+| ---------- | --------------------------- |
+| `Jason:`   | [X]                         |
+| `Jessica:` | [X]                         |
+| `Pedro:`   | []                          |
 
 ## Project Backlog
 
@@ -159,6 +157,5 @@ Welcome to **Earthwise Packaging**, where we’re on a mission to help the food 
 
 | By who?     | _On what exactly_?                               | _Where_?                   |
 | ----------- | ------------------------------------------------ | -------------------------- |
-| `Pedro:`    | A prefetch product when a user hovers a product  | **Front** End              |
 | `Jason:`    | Shipping options with shipping progress.         | **Back** End               |
 | `Everyone:` | Being able to implement a search/filter feature. | **Back** _&_ **Front** End |
