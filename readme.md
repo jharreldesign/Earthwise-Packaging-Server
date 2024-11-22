@@ -9,7 +9,8 @@
 Welcome to the **Earthwise Packaging (Back-End)**!
 <br/>I see you're a _curios_ one.
 <br/>Fear not you are free to explore our **back-end** space!
-<br/>You can _fork_ and add onto our project on your side or use this is a template!
+<br/>You can _fork_ and add onto our project on your side or use this as a template!
+
 
 ## Table of Contents
 

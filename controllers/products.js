@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { Product } = require('../models/product');
-const verifyToken = require('../middleware/verify-token'); // Middleware to verify the token
+const verifyToken = require('../middleware/verify-token'); 
 
 // Middleware to check user role
 const verifyAdmin = (req, res, next) => {
