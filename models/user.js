@@ -21,10 +21,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  hashedPassword: {
-    type: String,
-    required: true,
-  },
+  // hashedPassword: {
+  //   type: String,
+  //   required: true,
+  // },
   address: [
     {
       street: { type: String, required: true },
