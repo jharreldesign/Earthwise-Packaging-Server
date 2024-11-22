@@ -41,7 +41,7 @@ Welcome to the **Earthwise Packaging (Back-End)**!
 
 - [Front end](https://github.com/PedroCr05/earthwise-front-end)
 
-- [Deployment Site](https://earthwisepackaging.netlify.app)
+- [Deployment Site](https://earthwisepackaging-ca248d6888bb.herokuapp.com/)
 
 ## How to Download & Run the Project
 
