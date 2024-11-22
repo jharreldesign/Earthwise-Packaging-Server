@@ -1,5 +1,5 @@
 <div style="width:25%; margin: auto;">
-  <img src="./assets/Site-Logo/earthwise-logo" width="100px" alt="earthwise-packaging-logo">
+  <img src="./assets/Site-Logo/favicon.ico" width="100px" alt="earthwise-packaging-logo">
 </div>
 
 # EARTHWISE PACKAGING (Back-End)
